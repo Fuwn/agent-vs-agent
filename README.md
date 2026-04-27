@@ -35,3 +35,18 @@ scored evaluation.
 ```
 
 Challenge directories are named `<agent-a>-vs-<agent-b>_<topic>`.
+
+## Environment
+
+To keep runs comparable, each agent uses its vendor's own CLI with all MCP
+servers and skills disabled. The only project guidance loaded is the
+respective `CLAUDE.md` / `AGENTS.md`, kept equivalent across agents.
+
+| Agent           | CLI         | Version                  |
+| --------------- | ----------- | ------------------------ |
+| Claude Opus 4.7 | Claude Code | `2.1.120 (Claude Code)`  |
+| GPT-5.5         | Codex CLI   | `codex-cli 0.124.0-alpha.3` |
+
+Scoring is run by a third agent — Kimi K2.6 via Pi `0.67.68` — given both
+responses and the prompt's rubric. The verdict file in each challenge is its
+output verbatim.
